@@ -11795,7 +11795,7 @@ DistanceJoint2D:
   m_BreakForce: Infinity
   m_BreakTorque: Infinity
   m_BreakAction: 3
-  m_AutoConfigureConnectedAnchor: 1
+  m_AutoConfigureConnectedAnchor: 0
   m_Anchor: {x: 0, y: 0}
   m_ConnectedAnchor: {x: 0.6, y: -5.77}
   m_AutoConfigureDistance: 0
@@ -11813,7 +11813,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 54dec0c0570d0da449a9b41e0e996c00, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  grappleLength: 3
+  grappleLength: 2
   grappleLayer:
     serializedVersion: 2
     m_Bits: 64
