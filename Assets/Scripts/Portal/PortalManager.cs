@@ -8,7 +8,7 @@ public class PortalManager : MonoBehaviour
     Transform player;
     Animator anim;
     Rigidbody2D rb;
-
+    public GameObject loading;
     // Start is called before the first frame update
     void Start()
     {
@@ -39,14 +39,18 @@ public class PortalManager : MonoBehaviour
         rb.simulated = false;
         anim.Play("PortalIn");
         StartCoroutine(MoveInPorta());
+        loading.SetActive(true);
         yield return new WaitForSeconds(0.5f);
         if (des != null)
         {
             player.transform.position = des.position;
         }
+       
         anim.Play("PortalOut");
         yield return new WaitForSeconds(0.4f);
         rb.simulated = true;
+        yield return new WaitForSeconds(0.2f);
+        loading.SetActive(false);
     }
 
     IEnumerator MoveInPorta()
